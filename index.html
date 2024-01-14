@@ -4,23 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="style.css">
     <title>Palandrom Checker</title>
 </head>
 
 <body>
     <main class="container">
-        <img class="profile-pic" src="images/profilepng.png" alt="Web-Dev-Codi's Profile Pic" />
+        <img class="profile-pic" src="images/profilepng.png" alt="Web-Dev-Codi's Profile Pic" width="500" height="500"/>
         <h1 class="title">Is it a Palindrome?</h1>
         <div class="palindrome-div">
-            <label for="text-input">Enter in text to check for a palindrome:
-            </label>
-            <input class="palindrome-input" id="text-input" value="" type="text">
+            <label for="text-input">Enter in text to check for a palindrome: </label>
+            <input class="palindrome-input" id="text-input"  value="" type="text">
             <button class="palindrome-btn" id="check-btn">Check</button>
             <div class="results-div hidden" id="result"></div>
         </div>
     </main>
-
+<script src="script.js"></script>
 </body>
 
 </html>
