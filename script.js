@@ -1,42 +1,48 @@
 // const textInput = document.getElementById("text-input");
 // const checkButton = document.getElementById("check-btn");
 // const result = document.getElementById("result");
-// const hiddenContainer = document.getElementById("hidden-container");
-
-// const checkBtn = (event) => {
-// 	event.preventDefault();
-//     hiddenContainer.style.display = "block";
-// };
+const hiddenContainer = document.getElementById("hidden-container");
 
 // const textParser = (event) => {
 // 	result.innerText = event.target.value;
 // };
 
-// const palindromCheckerFuntion = (textParser) => {
+const arrayStr = ["racecar"];
+const arrayStr2 = ["love"];
 
+const palindromChecker = (str) => {
+	let palindromEl = Array.from(str);
+	let palindromEl2 = palindromEl.reverse();
+	console.log("palindromEl2:", palindromEl2);
+	for (let i = 0; i < str.length; i++) {
+		if (palindromEl.indexOf(palindromEl2)) {
+			palindromEl =
+				hiddenContainer.innerText = `${str[i]} is a palindrom`;
+			hiddenContainer.style.display = 'block'
+			return palindromEl;
+		} else if (palindromEl != palindromEl2) {
+			palindromEl =
+				hiddenContainer.innerText = `${str[i]} is NOT a palindrom`;
+			return palindromEl;
+		}
+	}
+};
+
+console.log(palindromChecker(arrayStr));
+console.log(palindromChecker(arrayStr2));
+
+// const checkBtn = (event) => {
+// 	event.preventDefault();
+// 	palindromChecker(textParser);
 // };
 
 // const resultsDiv = (textParser) => {
 // 	const displayDiv = document.createElement("p");
 // 	const text = document.createTextNode(textParser);
 //     result.appendChild(displayDiv);
-//     displayDiv.appendChild(text)
+// 	displayDiv.appendChild(text)
+// 	palindromChecker(textParser)
 // };
 
-// checkButton.addEventListener("click", checkBtn);
 // textInput.addEventListener("input", textParser);
-
-const arrayStr = ["racecar"];
-
-const palindromChecker = (str) => {
-	let palindromEl = "";
-	for (let i = 0; i < str.length; i++) {
-		for (let j = str.length - 1; j > -1; j--) {
-			if (str[i] === str[j]) {
-				return true
-			}
-		}
-	}
-};
-
-console.log(palindromChecker(arrayStr));
+// checkButton.addEventListener("click", checkBtn);

@@ -44,3 +44,46 @@ const palindromChecker = (str) => {
 
 const palTest = palindromChecker(arrayStr);
 console.log("palTest:", palTest);
+
+
+
+
+
+
+const palindromChecker = (str) => {
+	for (let i = 0; i < str.length; i++) {
+		for (let j = str.length - 1; j > -1; j--) {
+			if (str[i] === str[j]) {
+				const displayDiv = document.createElement("p");
+				const text = document.createTextNode(textParser);
+				result.appendChild(displayDiv);
+				displayDiv.appendChild(text);
+			} else if (str[i] !== str[j]) {
+				const displayDiv = document.createElement("p");
+				const text = document.createTextNode(textParser);
+				result.appendChild(displayDiv);
+				displayDiv.appendChild(text);
+			}
+		}
+	}
+};
+
+
+const palindromChecker = (str) => {
+
+	let palindromEl = [...str];
+	for (let i = 0; i < str.length; i++) {
+		for (let j = 0; j < str.length; j++) {
+			let str1 = Array.from(str[i]);
+			let str2 = Array.from(str[j]);
+			if (str1.indexOf(str2, 0)) {
+				palindromEl =
+					hiddenContainer.innerText = `${str[i]} is a palindrom`;
+			} else if (str1.indexOf(str2, 0)) {
+				palindromEl =
+					hiddenContainer.innerText = `${str[i]} is NOT a palindrom`;
+			}
+		}
+	}
+	return palindromEl;
+};
