@@ -39,7 +39,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
     padding: 20px;
     margin: 10px 0;
     background-color: white;
@@ -71,6 +71,10 @@ label {
     border-bottom: 2px solid #5a01a7;
 }
 
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
 .palindrome-input:focus {
     border-bottom: 3px solid #5a01a7;
 }
@@ -92,8 +96,14 @@ label {
     color: black;
 }
 
-.hidden {
+.results-hidden-container {
     display: none;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .palindrome-definition-div {
@@ -107,6 +117,7 @@ label {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .palindrome-definition {

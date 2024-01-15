@@ -17,16 +17,23 @@
 
 <body>
     <main class="container">
-        <img class="profile-pic" src="images/profilepng.png" alt="Web-Dev-Codi's Profile Pic" width="500" height="500"/>
+        <img class="profile-pic" src="images/profilepng.png" alt="Web-Dev-Codi's Profile Pic" width="500"
+            height="500" />
         <h1 class="title">Is it a Palindrome?</h1>
         <div class="palindrome-div">
-            <label for="text-input">Enter in text to check for a palindrome: </label>
-            <input class="palindrome-input" id="text-input"  value="" type="text">
-            <button class="palindrome-btn" id="check-btn">Check</button>
-            <div class="results-div hidden" id="result"></div>
+            <div class="input-container">
+                <label for="text-input">Enter in text to check for a palindrome: </label>
+                <div>
+                    <input class="palindrome-input" id="text-input" value="" type="text">
+                    <button class="palindrome-btn" id="check-btn">Check</button>
+                </div>
+            </div>
+            <div class="results-hidden-container" id="hidden-container">
+                <div class="results-div" id="result"></div>
+            </div>
         </div>
     </main>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -29,14 +29,18 @@
 const arrayStr = ["racecar"];
 
 const palindromChecker = (str) => {
-	let palindromEl = "";
+	let palindromEl = '';
 	for (let i = 0; i < str.length; i++) {
-		for (let j = str.length - 1; j > -1; j--) {
-			if (str[i] === str[j]) {
-				return true
-			}
+		for (let j = 0; j < str.length; j++) {
+			let str1 = Array.from(str[i])
+			let str2 = Array.from(str[j])
+            if (str1.includes(i) === str2.includes(j)) {
+              palindromEl = str1.toString(str2)
+            }
 		}
 	}
+    return palindromEl;
 };
 
-console.log(palindromChecker(arrayStr));
+const palTest = palindromChecker(arrayStr);
+console.log("palTest:", palTest);
