@@ -10,20 +10,19 @@ const hiddenContainer = document.getElementById("hidden-container");
 const arrayStr = ["racecar"];
 const arrayStr2 = ["love"];
 
-const palindromChecker = (str) => {
-	let palindromEl = Array.from(str);
-	let palindromEl2 = palindromEl.reverse();
-	console.log("palindromEl2:", palindromEl2);
+
+const _$palindromCheckerFn = (str) => {
+	const answer = "";
+
 	for (let i = 0; i < str.length; i++) {
-		if (palindromEl.indexOf(palindromEl2)) {
-			palindromEl =
-				hiddenContainer.innerText = `${str[i]} is a palindrom`;
-			hiddenContainer.style.display = 'block'
-			return palindromEl;
-		} else if (palindromEl != palindromEl2) {
-			palindromEl =
-				hiddenContainer.innerText = `${str[i]} is NOT a palindrom`;
-			return palindromEl;
+		for (let j = 0; j < str.length; j++) {
+			let one = [...str[i]];
+			let two = [...str[j]].reverse();
+			if (JSON.stringify(one) === JSON.stringify(two)) {
+				console.log(`${str} is a palindrome`);
+			} else if (JSON.stringify(one) !== JSON.stringify(two)) {
+				console.log(`${str} is NOT a palindrome`);
+			}
 		}
 	}
 };
