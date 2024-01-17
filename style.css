@@ -75,6 +75,7 @@ label {
     display: flex;
     flex-direction: column;
 }
+
 .palindrome-input:focus {
     border-bottom: 3px solid #5a01a7;
 }
@@ -98,14 +99,17 @@ label {
 
 .hidden {
     display: none;
-    color:black;
-   
+    color: black;
 }
 
 .input-container {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.error {
+    color: red;
 }
 
 .palindrome-definition-div {
