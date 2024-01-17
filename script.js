@@ -1,14 +1,9 @@
 const textInput = document.getElementById("text-input");
 const checkButton = document.getElementById("check-btn");
 const result = document.getElementById("result");
-const hiddenContainer = document.getElementById("hidden-container");
-
-const textParser = (event) => {
-	result.innerText = event.target.value;
-};
 
 const _$palindromCheckerFn = (str) => {
-	// let FuckingDone = ""
+	let para = document.createElement("p");
 	for (let i = 0; i < str.length; i++) {
 		const arrOne = [...str[i]];
 		const arrTwo = [...arrOne].reverse();
@@ -19,19 +14,21 @@ const _$palindromCheckerFn = (str) => {
 			.toString()
 			.replace(/[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g, "");
 		if (arrStr !== arrStrTwo) {
-			result.style.display = "block";
-	console.log(`${str} is NOT a palindrome`);
+			result.appendChild(para);
+			para.className = "user-input";
+			para.innerText = `${str} is NOT a palindrom`;
 		}
 		if (arrStr === arrStrTwo) {
-			result.style.display = "block";
-				console.log(`${str} is a palindrome`);
+			result.appendChild(para);
+			para.className = "user-input";
+			para.innerText = `${str} is a palindrom`;
 		}
 	}
-
 };
 
 const deleteCloseElement = () => {
 	result.style.display = "none";
+	para.innerText = "";
 };
 
 const checkBtn = (event) => {
@@ -48,6 +45,6 @@ const checkBtn = (event) => {
 	_$palindromCheckerFn(str);
 };
 
-textInput.addEventListener("input", textParser);
+result.addEventListener("click", deleteCloseElement);
 checkButton.addEventListener("click", checkBtn);
 textInput.addEventListener("keydown", deleteCloseElement);
