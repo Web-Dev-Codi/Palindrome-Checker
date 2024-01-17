@@ -96,9 +96,10 @@ label {
     color: black;
 }
 
-.results-hidden-container {
+.hidden {
     display: none;
-    color: black;
+    color:black;
+   
 }
 
 .input-container {
