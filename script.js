@@ -8,6 +8,7 @@ const textParser = (event) => {
 };
 
 const _$palindromCheckerFn = (str) => {
+	// let FuckingDone = ""
 	for (let i = 0; i < str.length; i++) {
 		const arrOne = [...str[i]];
 		const arrTwo = [...arrOne].reverse();
@@ -19,29 +20,32 @@ const _$palindromCheckerFn = (str) => {
 			.replace(/[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g, "");
 		if (arrStr !== arrStrTwo) {
 			result.style.display = "block";
-			console.log(`${str} is NOT a palindrome`);
+	console.log(`${str} is NOT a palindrome`);
 		}
 		if (arrStr === arrStrTwo) {
 			result.style.display = "block";
-			console.log(`${str} is a palindrome`);
+				console.log(`${str} is a palindrome`);
 		}
 	}
+
 };
 
-const deleteCloseElement = (event) => {
-	result.style.display = 'none'
-}
+const deleteCloseElement = () => {
+	result.style.display = "none";
+};
 
 const checkBtn = (event) => {
 	event.preventDefault();
+	const str = textInput.value;
 	if (!textInput.value) {
 		alert("Please input a value");
 		result.style.display = "none";
+		return;
 	} else if (textInput.value) {
 		result.style.display = "block";
-	} 
+	}
 	textInput.value = "";
-	_$palindromCheckerFn(event.target.value)
+	_$palindromCheckerFn(str);
 };
 
 textInput.addEventListener("input", textParser);
