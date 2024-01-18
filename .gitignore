@@ -1,3 +1,4 @@
-.txt
-txt
-testing.js
+*.txt
+
+/testing.js
+.testing.js
