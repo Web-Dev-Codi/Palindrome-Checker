@@ -1,50 +1,60 @@
 const textInput = document.getElementById("text-input");
 const checkButton = document.getElementById("check-btn");
 const result = document.getElementById("result");
+const resetBtn = document.getElementById("reset-btn");
 
 const _$palindromCheckerFn = (str) => {
-	let para = document.createElement("p");
+	const para = document.createElement("p");
+	let strOne = "";
+	let strTwo = "";
 	for (let i = 0; i < str.length; i++) {
-		const arrOne = [...str[i]];
-		const arrTwo = [...arrOne].reverse();
-		const arrStr = arrOne
+		const strArray = Array.from(str[i]);
+		const strArrayTwo = Array.from(strArray).slice().reverse();
+		let newOne = strArray
 			.toString()
+			.toLowerCase()
 			.replace(/[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g, "");
-		const arrStrTwo = arrTwo
+		let newTwo = strArrayTwo
 			.toString()
+			.toLowerCase()
 			.replace(/[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g, "");
-		if (arrStr !== arrStrTwo) {
+
+		if (newOne !== newTwo) {
 			result.appendChild(para);
+			result.style.display = "block";
 			para.className = "user-input";
-			para.innerText = `${str} is NOT a palindrom`;
+			strTwo = `${str} is NOT a palindrom`;
+			para.innerText = strTwo;
+
 		}
-		if (arrStr === arrStrTwo) {
+		if (newOne === newTwo) {
 			result.appendChild(para);
+			result.style.display = "block";
 			para.className = "user-input";
-			para.innerText = `${str} is a palindrom`;
+			strOne = `${str} is a palindrom`;
+			para.innerText = strOne;
+		
 		}
 	}
 };
 
-const deleteCloseElement = () => {
-	result.style.display = "none";
-	para.innerText = "";
+
+const resetUI = (event) => {	
+	textInput.value = "";
 };
+
 
 const checkBtn = (event) => {
-	event.preventDefault();
 	const str = textInput.value;
-	if (!textInput.value) {
+	if (!str) {
 		alert("Please input a value");
 		result.style.display = "none";
-		return;
-	} else if (textInput.value) {
-		result.style.display = "block";
 	}
-	textInput.value = "";
+	if (str) {
+		resetUI();
+	}
 	_$palindromCheckerFn(str);
 };
 
-result.addEventListener("click", deleteCloseElement);
 checkButton.addEventListener("click", checkBtn);
-textInput.addEventListener("keydown", deleteCloseElement);
+resetBtn.addEventListener("click", resetUI);
