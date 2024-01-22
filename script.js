@@ -8,21 +8,12 @@ function isPalindrome(str) {
 	let formattedStr = str.toLowerCase().replace(/[^a-z0-9]/g, "");
 	let reversedStr = formattedStr.split("").reverse().join("");
 	if (formattedStr === reversedStr) {
-		para.className = "user-input";
-		result.appendChild(para);
-		result.style.display = "block";
-		formattedStr = `${str} is a palindrom`;
-		console.log(`${str} is a palindrom`);
-		para.innerText = formattedStr;
+		result.className = "results-div";
+		return (result.innerText = `${str} is a palindrom`);
 	} else {
-		para.className = "user-input";
-		result.appendChild(para);
-		result.style.display = "block";
-		reversedStr = `${str} is NOT a palindrom`;
-		console.log(`${str} is NOT a palindrom`);
-		para.innerText = reversedStr;
+		result.className = "results-div";
+		return (result.innerText = `${str} is not a palindrom`);
 	}
-	return formattedStr === reversedStr;
 }
 
 function inputValue() {
@@ -30,27 +21,22 @@ function inputValue() {
 	return str;
 }
 
-function resetUI(event) {
-	textInput.value = "";
-	checkButton.className = "palindrom-btn";
-	result.remove();
-	resetBtn.style.display = 'none'
-	
-}
-
 function checkBtn(event) {
+	event.preventDefault()
 	if (!textInput.value) {
 		alert("Please input a value");
 	}
 	if (textInput.value) {
+		setTimeout(() => {
+			textInput.value = "";
+			location.reload();
+		}, 3000);
 		const str = textInput.value;
-		checkButton.style.display = "none";
-		resetBtn.className = "palindrome-reset-btn";
 		isPalindrome(textInput.value);
 		return str;
 	}
 }
 
-resetBtn.addEventListener("click", resetUI);
 textInput.addEventListener("input", inputValue);
-checkButton.addEventListener("click", checkBtn);
+checkButton.addEventListener("click", checkBtn, false);
+
