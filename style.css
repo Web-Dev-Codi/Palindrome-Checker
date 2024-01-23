@@ -96,6 +96,12 @@ label {
 }
 
 .results-div {
+    display: grid;
+    place-content: center;
+    margin: 10px 0px;
+    background-color: #ffffff;
+    font-size: 25px;
+    text-align: center;
     overflow-y: auto;
     word-wrap: break-word;
     min-height: 50px;
@@ -105,6 +111,10 @@ label {
 .hidden {
     display: none;
     color: black;
+}
+
+.palindrom-answer-div {
+
 }
 
 

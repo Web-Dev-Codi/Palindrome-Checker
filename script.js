@@ -9,10 +9,12 @@ function isPalindrome(str) {
 	let reversedStr = formattedStr.split("").reverse().join("");
 	if (formattedStr === reversedStr) {
 		result.className = "results-div";
-		return (result.innerText = `${str} is a palindrom`);
+		result.appendChild(para)
+		return (para.innerText = `${str} is a palindrom`);
 	} else {
 		result.className = "results-div";
-		return (result.innerText = `${str} is not a palindrom`);
+		result.appendChild(para);
+		return (para.innerText = `${str} is not a palindrom`);
 	}
 }
 
