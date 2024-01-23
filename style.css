@@ -16,7 +16,6 @@ body {
 }
 
 .container {
-    /* width: 100%; */
     min-height: 100vh;
     padding: 1.5rem clamp(1rem, 5%, 3rem);
     position: relative;
@@ -45,17 +44,10 @@ body {
 .title {
     text-align: center;
     padding: 10px 0;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: clamp(1rem, 0.6522rem + 1.7391vw, 2rem);
+    margin-bottom: 5px;
+    max-width: 100%;
 }
-
-/* .palindrome-div {
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-} */
 
 label {
     color: #0a0a23;
@@ -63,11 +55,8 @@ label {
 }
 
 .palindrome-btn {
-    /* width: 100%; */
     border: none;
-    padding: 10px;
-    margin: 10px;
-    /* border-radius: 15px; */
+    padding:  10px;
     background-color: #5a01a7;
     color: #fff;
     cursor: pointer;
@@ -76,10 +65,7 @@ label {
 
 .palindrome-input {
     height: 38px;
-    /* width: 100%; */
-    text-align: center;
-    font-size: 1.2rem;
-    margin: 10px;
+    margin: 10px 0px;
     border: none;
 }
 
@@ -100,12 +86,12 @@ label {
 }
 
 .palindrome-input::placeholder {
+    font-size: 0.9rem;
     text-align: center;
 }
 
 .palindrome-input {
     font-size: 1.4rem;
-    /* margin-top: 10px; */
     text-align: center;
 }
 
@@ -127,12 +113,11 @@ label {
 }
 
 .palindrome-definition-div {
-    /* width: min(100vw, 500px); */
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 0.8261rem + 0.8696vw, 1.5rem);
     min-height: 140px;
     background-color: #00471b;
     margin-top: 20px;
-    padding: 20px;
+    padding: 0.7rem clamp(0.5rem, 5%, 3rem);
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -145,20 +130,3 @@ label {
     text-align: center;
 }
 
-/* @media (max-width: 500px) {
-    .main-wrapper {
-        max-width: fit-content;
-
-    }
-
-    .palindrome-btn,
-    .palindrome-input {
-        width: 100%;
-    }
-
-    .palindrome-input {
-        padding: 10px 0px;
-    }
-
-
-} */
