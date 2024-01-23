@@ -1,7 +1,7 @@
 #Build a Palindrome Checker
 
+![A screenshot of Web-Dev-Codi's Palindrome Checker App](palindromesitepng.png)
 
-![A picture of a guy drinking coffee coding](images/readmepng.png)
 
 A palindrome is a word or phrase that can be read the same way forwards and backwards, ignoring punctuation, case, and spacing.
 
