@@ -39,6 +39,17 @@ function checkBtn(event) {
 	}
 }
 
+// TODO -- configure enter key for palindrome checker
+const onKeyPress = (event) => {
+	// Key
+	console.log(event.key);
+	// KeyCode
+	console.log(event.keyCode);
+
+	// code
+	console.log(event.code);
+};
 textInput.addEventListener("input", inputValue);
 checkButton.addEventListener("click", checkBtn, false);
+
 
