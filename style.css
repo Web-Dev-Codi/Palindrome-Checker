@@ -100,7 +100,7 @@ label {
     place-content: center;
     margin: 10px 0px;
     background-color: #ffffff;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     overflow-y: auto;
     word-wrap: break-word;
@@ -113,9 +113,7 @@ label {
     color: black;
 }
 
-.palindrom-answer-div {
 
-}
 
 
 .error {
