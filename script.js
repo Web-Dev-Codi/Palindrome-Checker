@@ -17,7 +17,7 @@ function isPalindrome(str) {
 		return (para.innerText = `${str} is not a palindrom`);
 	}
 }
-
+g
 function inputValue() {
 	const str = textInput.value;
 	return str;
