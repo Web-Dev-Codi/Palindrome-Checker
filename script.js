@@ -9,7 +9,7 @@ function isPalindrome(str) {
 	let reversedStr = formattedStr.split("").reverse().join("");
 	if (formattedStr === reversedStr) {
 		result.className = "results-div";
-		result.appendChild(para)
+		result.appendChild(para);
 		return (para.innerText = `${str} is a palindrom`);
 	} else {
 		result.className = "results-div";
@@ -17,14 +17,14 @@ function isPalindrome(str) {
 		return (para.innerText = `${str} is not a palindrom`);
 	}
 }
-g
+
 function inputValue() {
 	const str = textInput.value;
 	return str;
 }
 
 function checkBtn(event) {
-	event.preventDefault()
+	event.preventDefault();
 	if (!textInput.value) {
 		alert("Please input a value");
 	}
@@ -50,6 +50,4 @@ const onKeyPress = (event) => {
 	console.log(event.code);
 };
 textInput.addEventListener("input", inputValue);
-checkButton.addEventListener("click", checkBtn, false);
-
-
+checkButton.addEventListener("click", checkBtn);
